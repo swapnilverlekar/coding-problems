@@ -1,6 +1,8 @@
 #deleting duplicates from a sorted array and returning the count of unique values in Constant space O(1) and linear time O(n)
 
 def delete_duplicates(l):
+    if not l:
+        return 0
     writing_ptr = 1
     for i in range(1, len(l)):
         if l[writing_ptr - 1] != l[i]:
